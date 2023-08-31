@@ -1,0 +1,23 @@
+app:
+  name: ordersfavorites-app
+  namespace: devhub
+  cluster: .apps.cluster-wk7fv.wk7fv.sandbox847.opentlc.com
+
+git:
+  branch: main
+  repo: https://github.com/devhub-mad/ordersfavorites-app
+  org: devhub-mad
+  name: ordersfavorites-app
+
+image:
+  host: image-registry.openshift-image-registry.svc:5000/devhub
+  name: ordersfavorites-app
+  tag: latest
+
+
+pipelineStorage:
+  pvcSize: 2Gi
+  storageClassName: ""
+
+targetEnvironment: dev
+env: []
